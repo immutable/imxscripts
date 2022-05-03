@@ -224,6 +224,13 @@ npx ts-node ./src/post/transfer-ERC20.ts \
   --network <NETWORK>
 ```
 
+#### Multi-transfer
+Transfer multiple tokens with a single request. The token definitions sit within the main() itself.
+
+```
+npx ts-node ./src/post/multi-transfer.ts -k <PRIVATE_KEY> --network <NETWORK>
+```
+
 #### Withdrawals
 
 Withdrawals on IMX is a two step process. The withdrawal needs to be prepared first. During preparation funds are deducted from the off-chain vault, and moved into the pending on-chain withdrawals area. This area is accessible to the StarkEx contract which completes the withdrawal when the `completeWithdraw` function is invoked. The `completeWithdraw` function invokes the relevant StarkEx contract function depending on the type of token. For example if we are withdrawing ETH/ERC-20, it invokes the `prepareWithdraw` function. If we are withdrawing a token minted on IMX, it invokes the `withdrawAndMint` else it just invokes the `withdrawNFT` function.
