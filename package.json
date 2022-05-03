@@ -13,6 +13,7 @@
     "magic-sdk": "^5.1.0",
     "node-fetch": "^3.0.0",
     "prettier": "^2.4.1",
+    "tslog": "^3.3.3",
     "yargs": "^17.2.1"
   },
   "scripts": {

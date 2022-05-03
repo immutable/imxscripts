@@ -1,8 +1,17 @@
 import yargs from 'yargs';
-import { registerUser } from '../utils/postHelpers/register-user'
+import { registerUser } from '../utils/postHelpers/register-user'; 
 
-async function main(network: string, ownerPrivateKey: string):Promise<{tx_hash: string;}> {
-  return await registerUser(network, ownerPrivateKey);
+async function main(network: string, ownerPrivateKey: string) {
+  try {
+    const result = await registerUser(network, ownerPrivateKey);
+    console.log('Result: ' + result);
+    console.log('Registration complete.');
+  }
+  catch(err) {
+    console.error('Registration failed.')
+    console.error(err);
+    process.exit(1);
+  }
 };
 
 const argv = yargs(process.argv.slice(2))
@@ -14,13 +23,3 @@ const argv = yargs(process.argv.slice(2))
   .parseSync();
 
 main(argv.k, argv.network)
-  .then(result => {
-    console.log('Result: ' + result);
-    console.log('Registration complete.');
-    
-  })
-  .catch(err => {
-    console.error('Registration failed.')
-    console.error(err);
-    process.exit(1);
-  });

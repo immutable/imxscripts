@@ -2,8 +2,15 @@ import yargs from 'yargs';
 import { depositNFT } from '../utils/postHelpers/deposit-NFT'
 
 async function main(ownerPrivateKey: string, tokenid: string, tokenaddress:string, network:string) {
+  try {
     const response = await depositNFT(ownerPrivateKey, tokenid, tokenaddress, network);
     console.log(`NFT deposit Tx: ${JSON.stringify(response)}`);
+  }  
+  catch(err) {
+    console.error('NFT deposit failed.')
+    console.error(err);
+    process.exit(1);
+  }
 }
 
 const argv = yargs(process.argv.slice(2))
@@ -17,10 +24,3 @@ const argv = yargs(process.argv.slice(2))
   .parseSync();
 
 main(argv.k, argv.t, argv.s, argv.network)
-  .then(() => { 
-})
-  .catch(err => {
-    console.error('Deposit failed.')
-    console.error(err);
-    process.exit(1);
-  });

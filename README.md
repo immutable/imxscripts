@@ -332,6 +332,7 @@ npx ts-node deploy-contract.ts \
 ```
 
 ## TODO:
+* Add recursion to the end-to-end mint to wait for fetch mint rather than using delay
 * Make amount on complete ETH withdrawal optional as it's not a variable
 * Add a method to fetch the latest IMX contracts directly from the repo before compile
 * Fix get vaults
