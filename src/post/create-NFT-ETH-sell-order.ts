@@ -1,7 +1,7 @@
 import yargs from 'yargs';
 import { sellNFT } from '../utils/postHelpers/create-NFT-ETH-sell-order'
 
-async function main(ownerPrivateKey: string, tokenAddress: string, tokenId: string, saleAmount:string, network:string): Promise<void> {
+async function main(ownerPrivateKey: string, tokenId: string, tokenAddress: string, saleAmount:string, network:string): Promise<void> {
     // Transfer the token to the administrator
     const result = await sellNFT(ownerPrivateKey, tokenId, tokenAddress, saleAmount, network);
     console.log(result)

@@ -2,7 +2,7 @@ import { ethers } from 'ethers';
 import { ERC721TokenType, ETHTokenType, ImmutableMethodResults } from '@imtbl/imx-sdk';
 import { getClient } from '../client';
 
-export async function sellNFT(ownerPrivateKey: string, tokenAddress: string, tokenId: string, saleAmount: string, network: string): Promise<ImmutableMethodResults.ImmutableCreateOrderResult> {
+export async function sellNFT(ownerPrivateKey: string, tokenId: string, tokenAddress: string, saleAmount: string, network: string): Promise<ImmutableMethodResults.ImmutableCreateOrderResult> {
     const client = await getClient(network, ownerPrivateKey);
     return client.createOrder ({
         user: client.address,

@@ -168,7 +168,7 @@ npx ts-node ./src/post/deposit-NFT.ts \
 To deposit ERC20 from L1 to L2 issue the following command:
 
 ```
-npx ts-node ./src/post/deposit-ETH.ts -k <PRIVATE_KEY> -a <AMOUNT> --network <NETWORK>                    
+npx ts-node ./src/post/deposit-ETH.ts -k <PRIVATE_KEY> -a <AMOUNT> -d <DECIMALS> -y <SYMBOL> -t <SMART_CONTRACT_ADDRESS> --network <NETWORK>                   
 ```
 
 #### Mint NFT without royalties
