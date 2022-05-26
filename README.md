@@ -204,11 +204,9 @@ npx ts-node ./src/post/transfer-ETH.ts \
 ```
 npx ts-node ./src/post/transfer-NFT.ts \
   -k <PRIVATE_KEY>> \
-  -a <AMOUNT> \
-  -d <DECIMALS> \
-  -y <SYMBOL> \
+  -r <RECEIVER_ADDRESS> \
+  -t <TOKEN_ID> \
   -s <SMART_CONTRACT_ADDRESS> \
-  --step prepare \
   --network <NETWORK>
 ```
 #### Transfer ERC20
