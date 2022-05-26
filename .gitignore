@@ -11,6 +11,9 @@
 # production
 /build
 
+# compiled contracts
+/src/L1/artifacts
+
 # misc
 .DS_Store
 .env
