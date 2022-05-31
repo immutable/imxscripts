@@ -24,7 +24,7 @@ const IMX_API_ADDRESS = "https://api.ropsten.x.immutable.com/v1";
 
 /**
  * Create the Immutable client. In this example we use this client for all
- * interactions. We do not use Link as this sample is not dependant on a
+ * interactions. We do not use Link as this sample is not dependent on a
  * browser. For all user interactions please use Link instead.
  * @param wallet Web3 wallet
  * @returns ImmutableXClient
@@ -277,7 +277,7 @@ async function main(): Promise<void> {
     if (paymentReceived) {
       // 5. Payment was received, so let's transfer the token to the buyer
       await transferToken(buyer.address, seller, tokenId);
-      console.log("Token transfered. Now let's check the user inventory.");
+      console.log("Token transferred. Now let's check the user inventory.");
       await sleep(5000);
 
       // 6. Check the buyers inventory to see if they received the token

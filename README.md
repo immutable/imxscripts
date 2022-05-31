@@ -95,4 +95,4 @@ npx ts-node ./src/admin/withdrawal.ts \
 
 * Add support for withdrawing ERC-20 & ETH.
 * Add support for depositing ERC-721 from L1 to L2.
-* Add support for transfering ERC-721 & ETH-20 between users.
+* Add support for transferring ERC-721 & ETH-20 between users.
