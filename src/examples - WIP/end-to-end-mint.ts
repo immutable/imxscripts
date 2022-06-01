@@ -10,7 +10,7 @@ import yargs from 'yargs';
 async function main(ownerPrivateKey:string, network:string) {
     
     //Compile the contract
-    compileContract();
+    await compileContract();
 
     //Deploy the contract with the below parameters. 5m gas limit and 60gwei gas price seems to work fine for the NFT contracts. 
     //Make sure you have enough ropsten ETH on this address. Check out https://imxfaucet.xyz/ to get some.
