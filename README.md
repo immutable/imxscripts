@@ -203,7 +203,7 @@ npx ts-node ./src/post/transfer-ETH.ts \
 
 ```
 npx ts-node ./src/post/transfer-NFT.ts \
-  -k <PRIVATE_KEY>> \
+  -k <PRIVATE_KEY> \
   -r <RECEIVER_ADDRESS> \
   -t <TOKEN_ID> \
   -s <SMART_CONTRACT_ADDRESS> \
